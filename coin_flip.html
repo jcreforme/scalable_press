@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+div {
+	margin: 0 auto;
+	text-align: center;
+	width: 500px;
+}
+
+</style>
+<script>
+function flip() {
+  return Math.random();
+}
+
+function randomNumber(n) {
+  // Return a random number between 1 and n:
+  if(n > 0 && n <=1000000 ){
+  	var result = Math.floor((flip() * n) + 1);
+  	document.getElementById('coinflip').innerHTML = result;
+  }else{
+  	document.getElementById('coinflip').innerHTML = "Incorrect range number";
+  }
+}
+
+
+
+window.onload = function() {
+	
+    
+    randomNumber(10) // returns 123
+	//randomNumber(1) // returns 0
+	//randomNumber(500) // returns 466
+	//randomNumber(1000001) // throw error     
+}
+</script>
+</head>
+<body>
+
+<div id="coinflip">
+
+</div>
+
+
+
+</body>
+</html>
